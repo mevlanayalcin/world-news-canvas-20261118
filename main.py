@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """Publish the committed poster to the make.fun output directory.
 
-The repository ships a single 1024x1024 image at ``entry.png``. Its bytes are a
-JPEG (quality 90-92, 4:4:4) despite the ``.png`` name, so this script accepts a
-PNG or a JPEG container, validates the structure and exact dimensions, and then
-copies the bytes atomically to ``$MAKEFUN_OUTPUT_DIR/entry.png`` (default
-``/output/entry.png``).
+The repository ships a single 1024x1024 image at ``entry.png`` (a lossless RGB
+PNG). This script accepts a PNG or a JPEG container, validates the structure and
+exact dimensions, and then copies the bytes atomically to
+``$MAKEFUN_OUTPUT_DIR/entry.png`` (default ``/output/entry.png``).
 
 Standard library only. Safe under ``python3 -P -s``: it never imports from the
 working directory, never uses site packages, never touches the network, and
