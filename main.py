@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Publish the committed poster to the make.fun output directory.
 
-The repository ships a single 1024x1024 image at ``entry.png`` (a lossless RGB
-PNG). This script accepts a PNG or a JPEG container, validates the structure and
+The repository ships a single 1024x1024 image at ``entry.png`` (a 4:4:4 JPEG
+stored under the .png name). This script accepts a PNG or a JPEG container, validates the structure and
 exact dimensions, and then copies the bytes atomically to
 ``$MAKEFUN_OUTPUT_DIR/entry.png`` (default ``/output/entry.png``).
 
